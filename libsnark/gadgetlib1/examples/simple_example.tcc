@@ -41,6 +41,7 @@ r1cs_example<FieldT> gen_r1cs_example_from_protoboard(const size_t num_constrain
     }
 
     compute_inner_product.generate_r1cs_witness();
+    printf("122");
     return r1cs_example<FieldT>(pb.get_constraint_system(), pb.primary_input(), pb.auxiliary_input());
 }
 

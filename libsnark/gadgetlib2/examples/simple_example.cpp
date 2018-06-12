@@ -6,9 +6,9 @@
  *****************************************************************************/
 
 #include <libsnark/gadgetlib2/adapters.hpp>
-#include <libsnark/gadgetlib2/examples/simple_example.hpp>
 #include <libsnark/gadgetlib2/gadget.hpp>
 #include <libsnark/gadgetlib2/integration.hpp>
+#include "simple_example.hpp"
 
 namespace libsnark {
 

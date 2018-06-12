@@ -233,7 +233,7 @@ private:
 public:
     friend class OR_Gadget;
 private:
-    //external variables
+    //external variablesXXORXORff
     const LinearCombination input1_;
     const LinearCombination input2_;
     const Variable result_;
