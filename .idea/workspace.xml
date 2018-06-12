@@ -99,13 +99,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1205366-3e61-4a43-9a9d-a8099810a41a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change beforePath="$PROJECT_DIR$/depends/CMakeLists.txt" afterPath="$PROJECT_DIR$/depends/CMakeLists.txt" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libsnark/CMakeFiles/zk_proof_systems_r1cs_gg_ppzksnark_test.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/libsnark/CMakeFiles/zk_proof_systems_r1cs_gg_ppzksnark_test.dir/depend.make" />
       <change beforePath="$PROJECT_DIR$/depends/libff" afterPath="$PROJECT_DIR$/depends/libff" />
-      <change beforePath="$PROJECT_DIR$/libsnark/gadgetlib1/examples/simple_example.tcc" afterPath="$PROJECT_DIR$/libsnark/gadgetlib1/examples/simple_example.tcc" />
-      <change beforePath="$PROJECT_DIR$/libsnark/gadgetlib2/examples/simple_example.cpp" afterPath="$PROJECT_DIR$/libsnark/gadgetlib2/examples/simple_example.cpp" />
-      <change beforePath="$PROJECT_DIR$/libsnark/gadgetlib2/examples/tutorial.cpp" afterPath="$PROJECT_DIR$/libsnark/gadgetlib2/examples/tutorial.cpp" />
-      <change beforePath="$PROJECT_DIR$/libsnark/gadgetlib2/gadget.hpp" afterPath="$PROJECT_DIR$/libsnark/gadgetlib2/gadget.hpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -137,12 +133,48 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sha256_components.tcc" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sha256_components.tcc" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_components.tcc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1122">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="264">
+              <caret line="57" column="35" lean-forward="false" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_r1cs_gg_ppzksnark.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/libsnark/zk_proof_systems/ppzksnark/r1cs_gg_ppzksnark/tests/test_r1cs_gg_ppzksnark.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="251">
+              <caret line="28" column="41" lean-forward="true" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+              <folding>
+                <element signature="e#531#549#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="run_r1cs_gg_ppzksnark.tcc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libsnark/zk_proof_systems/ppzksnark/r1cs_gg_ppzksnark/examples/run_r1cs_gg_ppzksnark.tcc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding>
+                <element signature="e#610#628#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="run_r1cs_gg_ppzksnark.hpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libsnark/zk_proof_systems/ppzksnark/r1cs_gg_ppzksnark/examples/run_r1cs_gg_ppzksnark.hpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="244">
+              <caret line="29" column="26" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="26" />
+              <folding>
+                <element signature="e#573#622#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -152,26 +184,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1844">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sha256_gadget.tcc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_gadget.tcc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="30" column="73" lean-forward="false" selection-start-line="30" selection-start-column="73" selection-end-line="30" selection-end-column="73" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile_r1cs_ppzksnark.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libsnark/zk_proof_systems/ppzksnark/r1cs_ppzksnark/profiling/profile_r1cs_ppzksnark.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="19" column="67" lean-forward="false" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -211,17 +223,7 @@
         <entry file="file://$PROJECT_DIR$/libsnark/zk_proof_systems/ppzksnark/r1cs_se_ppzksnark/profiling/profile_r1cs_se_ppzksnark.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="990">
-              <caret line="53" column="35" lean-forward="true" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tutorial.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libsnark/gadgetlib2/examples/tutorial.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1100">
-              <caret line="50" column="27" lean-forward="false" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
+              <caret line="53" column="35" lean-forward="false" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -248,6 +250,7 @@
         <option value="$PROJECT_DIR$/depends/libff/libff/common/rng.tcc" />
         <option value="$PROJECT_DIR$/libsnark/gadgetlib2/examples/tutorial.cpp" />
         <option value="$PROJECT_DIR$/libsnark/gadgetlib1/examples/simple_example.tcc" />
+        <option value="$PROJECT_DIR$/libsnark/zk_proof_systems/ppzksnark/r1cs_gg_ppzksnark/tests/test_r1cs_gg_ppzksnark.cpp" />
       </list>
     </option>
   </component>
@@ -294,173 +297,40 @@
               <item name="libsnark" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="libsnark" type="462c0819:PsiDirectoryNode" />
               <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="gadgetlib1" type="462c0819:PsiDirectoryNode" />
+              <item name="zk_proof_systems" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="libsnark" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="libsnark" type="462c0819:PsiDirectoryNode" />
               <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="gadgetlib1" type="462c0819:PsiDirectoryNode" />
+              <item name="zk_proof_systems" type="462c0819:PsiDirectoryNode" />
+              <item name="ppzksnark" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="libsnark" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
+              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
+              <item name="zk_proof_systems" type="462c0819:PsiDirectoryNode" />
+              <item name="ppzksnark" type="462c0819:PsiDirectoryNode" />
+              <item name="r1cs_gg_ppzksnark" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="libsnark" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
+              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
+              <item name="zk_proof_systems" type="462c0819:PsiDirectoryNode" />
+              <item name="ppzksnark" type="462c0819:PsiDirectoryNode" />
+              <item name="r1cs_gg_ppzksnark" type="462c0819:PsiDirectoryNode" />
               <item name="examples" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="libsnark" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="libsnark" type="462c0819:PsiDirectoryNode" />
               <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="gadgetlib1" type="462c0819:PsiDirectoryNode" />
-              <item name="gadgets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libsnark" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="gadgetlib1" type="462c0819:PsiDirectoryNode" />
-              <item name="gadgets" type="462c0819:PsiDirectoryNode" />
-              <item name="hashes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libsnark" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="gadgetlib1" type="462c0819:PsiDirectoryNode" />
-              <item name="gadgets" type="462c0819:PsiDirectoryNode" />
-              <item name="hashes" type="462c0819:PsiDirectoryNode" />
-              <item name="sha256" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libsnark" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="gadgetlib1" type="462c0819:PsiDirectoryNode" />
+              <item name="zk_proof_systems" type="462c0819:PsiDirectoryNode" />
+              <item name="ppzksnark" type="462c0819:PsiDirectoryNode" />
+              <item name="r1cs_gg_ppzksnark" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libsnark" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="gadgetlib2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libsnark" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="gadgetlib2" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libsnark" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="gadgetlib2" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libsnark" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="relations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libsnark" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="relations" type="462c0819:PsiDirectoryNode" />
-              <item name="arithmetic_programs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libsnark" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="zk_proof_systems" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libsnark" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="zk_proof_systems" type="462c0819:PsiDirectoryNode" />
-              <item name="pcd" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libsnark" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="zk_proof_systems" type="462c0819:PsiDirectoryNode" />
-              <item name="pcd" type="462c0819:PsiDirectoryNode" />
-              <item name="r1cs_pcd" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libsnark" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="zk_proof_systems" type="462c0819:PsiDirectoryNode" />
-              <item name="ppzkadsnark" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libsnark" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="zk_proof_systems" type="462c0819:PsiDirectoryNode" />
-              <item name="ppzkadsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="r1cs_ppzkadsnark" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libsnark" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="zk_proof_systems" type="462c0819:PsiDirectoryNode" />
-              <item name="ppzksnark" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libsnark" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="zk_proof_systems" type="462c0819:PsiDirectoryNode" />
-              <item name="ppzksnark" type="462c0819:PsiDirectoryNode" />
-              <item name="r1cs_ppzksnark" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libsnark" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="zk_proof_systems" type="462c0819:PsiDirectoryNode" />
-              <item name="ppzksnark" type="462c0819:PsiDirectoryNode" />
-              <item name="r1cs_ppzksnark" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libsnark" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="zk_proof_systems" type="462c0819:PsiDirectoryNode" />
-              <item name="ppzksnark" type="462c0819:PsiDirectoryNode" />
-              <item name="r1cs_ppzksnark" type="462c0819:PsiDirectoryNode" />
-              <item name="profiling" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libsnark" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="zk_proof_systems" type="462c0819:PsiDirectoryNode" />
-              <item name="ppzksnark" type="462c0819:PsiDirectoryNode" />
-              <item name="r1cs_se_ppzksnark" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libsnark" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="zk_proof_systems" type="462c0819:PsiDirectoryNode" />
-              <item name="ppzksnark" type="462c0819:PsiDirectoryNode" />
-              <item name="r1cs_se_ppzksnark" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libsnark" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="libsnark" type="462c0819:PsiDirectoryNode" />
-              <item name="zk_proof_systems" type="462c0819:PsiDirectoryNode" />
-              <item name="ppzksnark" type="462c0819:PsiDirectoryNode" />
-              <item name="r1cs_se_ppzksnark" type="462c0819:PsiDirectoryNode" />
-              <item name="profiling" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -484,242 +354,242 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.zk_proof_systems_r1cs_se_ppzksnark_test">
-    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+  <component name="RunManager" selected="Application.zk_proof_systems_r1cs_gg_ppzksnark_test">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test" EXPLICIT_BUILD_TARGET_NAME="all">
       <envs />
     </configuration>
-    <configuration name="Continuous" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="Continuous" CONFIG_NAME="Debug">
+    <configuration name="Continuous" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="Continuous" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="ContinuousBuild" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ContinuousBuild" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="ContinuousBuild">
+    <configuration name="ContinuousBuild" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ContinuousBuild" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="ContinuousConfigure" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ContinuousConfigure" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="ContinuousConfigure">
+    <configuration name="ContinuousConfigure" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ContinuousConfigure" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="ContinuousCoverage" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ContinuousCoverage" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="ContinuousCoverage">
+    <configuration name="ContinuousCoverage" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ContinuousCoverage" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="ContinuousMemCheck" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ContinuousMemCheck" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="ContinuousMemCheck">
+    <configuration name="ContinuousMemCheck" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ContinuousMemCheck" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="ContinuousStart" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ContinuousStart" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="ContinuousStart">
+    <configuration name="ContinuousStart" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ContinuousStart" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="ContinuousSubmit" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ContinuousSubmit" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="ContinuousSubmit">
+    <configuration name="ContinuousSubmit" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ContinuousSubmit" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="ContinuousTest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ContinuousTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="ContinuousTest">
+    <configuration name="ContinuousTest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ContinuousTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="ContinuousUpdate" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ContinuousUpdate" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="ContinuousUpdate">
+    <configuration name="ContinuousUpdate" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ContinuousUpdate" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="Experimental" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="Experimental" CONFIG_NAME="Debug">
+    <configuration name="Experimental" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="Experimental" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="ExperimentalBuild" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ExperimentalBuild" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="ExperimentalBuild">
+    <configuration name="ExperimentalBuild" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ExperimentalBuild" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="ExperimentalConfigure" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ExperimentalConfigure" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="ExperimentalConfigure">
+    <configuration name="ExperimentalConfigure" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ExperimentalConfigure" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="ExperimentalCoverage" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ExperimentalCoverage" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="ExperimentalCoverage">
+    <configuration name="ExperimentalCoverage" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ExperimentalCoverage" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="ExperimentalMemCheck" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ExperimentalMemCheck" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="ExperimentalMemCheck">
+    <configuration name="ExperimentalMemCheck" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ExperimentalMemCheck" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="ExperimentalStart" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ExperimentalStart" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="ExperimentalStart">
+    <configuration name="ExperimentalStart" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ExperimentalStart" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="ExperimentalSubmit" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ExperimentalSubmit" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="ExperimentalSubmit">
+    <configuration name="ExperimentalSubmit" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ExperimentalSubmit" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="ExperimentalTest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ExperimentalTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="ExperimentalTest">
+    <configuration name="ExperimentalTest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ExperimentalTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="ExperimentalUpdate" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ExperimentalUpdate" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="ExperimentalUpdate">
+    <configuration name="ExperimentalUpdate" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ExperimentalUpdate" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="Nightly" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="Nightly" CONFIG_NAME="Debug">
+    <configuration name="Nightly" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="Nightly" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="NightlyBuild" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="NightlyBuild" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="NightlyBuild">
+    <configuration name="NightlyBuild" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="NightlyBuild" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="NightlyConfigure" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="NightlyConfigure" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="NightlyConfigure">
+    <configuration name="NightlyConfigure" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="NightlyConfigure" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="NightlyCoverage" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="NightlyCoverage" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="NightlyCoverage">
+    <configuration name="NightlyCoverage" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="NightlyCoverage" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="NightlyMemCheck" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="NightlyMemCheck" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="NightlyMemCheck">
+    <configuration name="NightlyMemCheck" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="NightlyMemCheck" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="NightlyMemoryCheck" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="NightlyMemoryCheck" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="NightlyMemoryCheck">
+    <configuration name="NightlyMemoryCheck" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="NightlyMemoryCheck" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="NightlyStart" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="NightlyStart" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="NightlyStart">
+    <configuration name="NightlyStart" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="NightlyStart" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="NightlySubmit" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="NightlySubmit" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="NightlySubmit">
+    <configuration name="NightlySubmit" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="NightlySubmit" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="NightlyTest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="NightlyTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="NightlyTest">
+    <configuration name="NightlyTest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="NightlyTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="NightlyUpdate" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="NightlyUpdate" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="NightlyUpdate">
+    <configuration name="NightlyUpdate" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="NightlyUpdate" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="check" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="check" CONFIG_NAME="Debug">
+    <configuration name="check" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="check" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="common_routing_algorithms_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="common_routing_algorithms_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="common_routing_algorithms_test">
+    <configuration name="common_routing_algorithms_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="common_routing_algorithms_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="demo_arithmetization" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="demo_arithmetization" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="demo_arithmetization">
+    <configuration name="demo_arithmetization" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="demo_arithmetization" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="demo_r1cs_ppzkadsnark" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="demo_r1cs_ppzkadsnark" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="demo_r1cs_ppzkadsnark">
+    <configuration name="demo_r1cs_ppzkadsnark" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="demo_r1cs_ppzkadsnark" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="demo_ram_ppzksnark" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="demo_ram_ppzksnark" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="demo_ram_ppzksnark">
+    <configuration name="demo_ram_ppzksnark" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="demo_ram_ppzksnark" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="demo_ram_ppzksnark_generator" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="demo_ram_ppzksnark_generator" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="demo_ram_ppzksnark_generator">
+    <configuration name="demo_ram_ppzksnark_generator" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="demo_ram_ppzksnark_generator" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="demo_ram_ppzksnark_prover" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="demo_ram_ppzksnark_prover" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="demo_ram_ppzksnark_prover">
+    <configuration name="demo_ram_ppzksnark_prover" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="demo_ram_ppzksnark_prover" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="demo_ram_ppzksnark_verifier" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="demo_ram_ppzksnark_verifier" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="demo_ram_ppzksnark_verifier">
+    <configuration name="demo_ram_ppzksnark_verifier" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="demo_ram_ppzksnark_verifier" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="doc" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="doc" CONFIG_NAME="Debug">
+    <configuration name="doc" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="doc" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="ff" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ff" CONFIG_NAME="Debug">
+    <configuration name="ff" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="ff" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="gadgetlib1_fooram_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="gadgetlib1_fooram_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="gadgetlib1_fooram_test">
+    <configuration name="gadgetlib1_fooram_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="gadgetlib1_fooram_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="gadgetlib1_r1cs_ppzksnark_verifier_gadget_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="gadgetlib1_r1cs_ppzksnark_verifier_gadget_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="gadgetlib1_r1cs_ppzksnark_verifier_gadget_test">
+    <configuration name="gadgetlib1_r1cs_ppzksnark_verifier_gadget_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="gadgetlib1_r1cs_ppzksnark_verifier_gadget_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="gadgetlib1_simple_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="gadgetlib1_simple_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="gadgetlib1_simple_test">
+    <configuration name="gadgetlib1_simple_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="gadgetlib1_simple_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="gadgetlib2_adapters_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="gadgetlib2_adapters_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="gadgetlib2_adapters_test">
+    <configuration name="gadgetlib2_adapters_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="gadgetlib2_adapters_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="gadgetlib2_constraint_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="gadgetlib2_constraint_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="gadgetlib2_constraint_test">
+    <configuration name="gadgetlib2_constraint_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="gadgetlib2_constraint_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="gadgetlib2_gadget_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="gadgetlib2_gadget_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="gadgetlib2_gadget_test">
+    <configuration name="gadgetlib2_gadget_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="gadgetlib2_gadget_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="gadgetlib2_integration_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="gadgetlib2_integration_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="gadgetlib2_integration_test">
+    <configuration name="gadgetlib2_integration_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="gadgetlib2_integration_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="gadgetlib2_protoboard_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="gadgetlib2_protoboard_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="gadgetlib2_protoboard_test">
+    <configuration name="gadgetlib2_protoboard_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="gadgetlib2_protoboard_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="gadgetlib2_variable_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="gadgetlib2_variable_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="gadgetlib2_variable_test">
+    <configuration name="gadgetlib2_variable_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="gadgetlib2_variable_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="gmock" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="gmock" CONFIG_NAME="Debug">
+    <configuration name="gmock" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="gmock" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="gmock_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="gmock_main" CONFIG_NAME="Debug">
+    <configuration name="gmock_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="gmock_main" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="gtest" CONFIG_NAME="Debug">
+    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="gtest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="gtest_main" CONFIG_NAME="Debug">
+    <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="gtest_main" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="lagrange_polynomial_evaluation" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="lagrange_polynomial_evaluation" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="lagrange_polynomial_evaluation">
+    <configuration name="lagrange_polynomial_evaluation" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="lagrange_polynomial_evaluation" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="multiexp_profile" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="multiexp_profile" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="multiexp_profile">
+    <configuration name="multiexp_profile" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="multiexp_profile" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="polynomial_evaluation" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="polynomial_evaluation" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="polynomial_evaluation">
+    <configuration name="polynomial_evaluation" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="polynomial_evaluation" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="polynomial_multiplication" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="polynomial_multiplication" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="polynomial_multiplication">
+    <configuration name="polynomial_multiplication" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="polynomial_multiplication" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="profile_bacs_ppzksnark" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="profile_bacs_ppzksnark" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="profile_bacs_ppzksnark">
+    <configuration name="profile_bacs_ppzksnark" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="profile_bacs_ppzksnark" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="profile_r1cs_gg_ppzksnark" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="profile_r1cs_gg_ppzksnark" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="profile_r1cs_gg_ppzksnark">
+    <configuration name="profile_r1cs_gg_ppzksnark" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="profile_r1cs_gg_ppzksnark" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="profile_r1cs_mp_ppzkpcd" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="profile_r1cs_mp_ppzkpcd" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="profile_r1cs_mp_ppzkpcd">
+    <configuration name="profile_r1cs_mp_ppzkpcd" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="profile_r1cs_mp_ppzkpcd" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="profile_r1cs_ppzksnark" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="profile_r1cs_ppzksnark" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="profile_r1cs_ppzksnark">
+    <configuration name="profile_r1cs_ppzksnark" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="profile_r1cs_ppzksnark" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="profile_r1cs_se_ppzksnark" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="profile_r1cs_se_ppzksnark" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="profile_r1cs_se_ppzksnark">
+    <configuration name="profile_r1cs_se_ppzksnark" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="profile_r1cs_se_ppzksnark" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="profile_r1cs_sp_ppzkpcd" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="profile_r1cs_sp_ppzkpcd" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="profile_r1cs_sp_ppzkpcd">
+    <configuration name="profile_r1cs_sp_ppzkpcd" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="profile_r1cs_sp_ppzkpcd" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="profile_ram_ppzksnark" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="profile_ram_ppzksnark" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="profile_ram_ppzksnark">
+    <configuration name="profile_ram_ppzksnark" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="profile_ram_ppzksnark" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="profile_ram_zksnark" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="profile_ram_zksnark" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="profile_ram_zksnark">
+    <configuration name="profile_ram_zksnark" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="profile_ram_zksnark" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="profile_routing_algorithms" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="profile_routing_algorithms" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="profile_routing_algorithms">
+    <configuration name="profile_routing_algorithms" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="profile_routing_algorithms" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="profile_routing_gadgets" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="profile_routing_gadgets" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="profile_routing_gadgets">
+    <configuration name="profile_routing_gadgets" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="profile_routing_gadgets" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="profile_tbcs_ppzksnark" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="profile_tbcs_ppzksnark" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="profile_tbcs_ppzksnark">
+    <configuration name="profile_tbcs_ppzksnark" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="profile_tbcs_ppzksnark" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="profile_uscs_ppzksnark" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="profile_uscs_ppzksnark" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="profile_uscs_ppzksnark">
+    <configuration name="profile_uscs_ppzksnark" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="profile_uscs_ppzksnark" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="relations_qap_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="relations_qap_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="relations_qap_test">
+    <configuration name="relations_qap_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="relations_qap_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="relations_sap_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="relations_sap_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="relations_sap_test">
+    <configuration name="relations_sap_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="relations_sap_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="relations_ssp_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="relations_ssp_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="relations_ssp_test">
+    <configuration name="relations_ssp_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="relations_ssp_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="snark" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="snark" CONFIG_NAME="Debug">
+    <configuration name="snark" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="snark" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="snark_adsnark" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="snark_adsnark" CONFIG_NAME="Debug">
+    <configuration name="snark_adsnark" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="snark_adsnark" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="snark_supercop" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="snark_supercop" CONFIG_NAME="Debug">
+    <configuration name="snark_supercop" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="snark_supercop" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="test_knapsack_gadget" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="test_knapsack_gadget" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="test_knapsack_gadget">
+    <configuration name="test_knapsack_gadget" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="test_knapsack_gadget" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="test_merkle_tree_gadgets" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="test_merkle_tree_gadgets" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="test_merkle_tree_gadgets">
+    <configuration name="test_merkle_tree_gadgets" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="test_merkle_tree_gadgets" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="test_set_commitment_gadget" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="test_set_commitment_gadget" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="test_set_commitment_gadget">
+    <configuration name="test_set_commitment_gadget" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="test_set_commitment_gadget" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="test_sha256_gadget" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="test_sha256_gadget" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="test_sha256_gadget">
+    <configuration name="test_sha256_gadget" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="test_sha256_gadget" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="zk_proof_systems_bacs_ppzksnark_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="zk_proof_systems_bacs_ppzksnark_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_bacs_ppzksnark_test">
+    <configuration name="zk_proof_systems_bacs_ppzksnark_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="zk_proof_systems_bacs_ppzksnark_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
     <configuration name="zk_proof_systems_r1cs_gg_ppzksnark_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
@@ -749,7 +619,7 @@
     <configuration name="zk_proof_systems_uscs_ppzksnark_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="zk_proof_systems_uscs_ppzksnark_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_uscs_ppzksnark_test">
       <envs />
     </configuration>
-    <configuration name="zm" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="zm" CONFIG_NAME="Debug">
+    <configuration name="zm" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="libsnark" TARGET_NAME="zm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="libsnark" RUN_TARGET_NAME="zk_proof_systems_r1cs_gg_ppzksnark_test">
       <envs />
     </configuration>
     <list size="89">
@@ -868,24 +738,24 @@
       <workItem from="1528014941423" duration="14407000" />
       <workItem from="1528558028760" duration="803000" />
       <workItem from="1528641165517" duration="5428000" />
-      <workItem from="1528720511460" duration="11321000" />
+      <workItem from="1528720511460" duration="13530000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59831000" />
+    <option name="totallyTimeSpent" value="62040000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="132" y="16" width="1537" height="912" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1029316" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30032572" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42633638" sideWeight="0.49771988" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36897" sideWeight="0.5022801" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09908735" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2464146" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -930,35 +800,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/libsnark/zk_proof_systems/ppzksnark/r1cs_ppzksnark/r1cs_ppzksnark.tcc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libsnark/gadgetlib2/gadget.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4972">
-          <caret line="226" column="52" lean-forward="false" selection-start-line="226" selection-start-column="52" selection-end-line="226" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libsnark/relations/constraint_satisfaction_problems/r1cs/r1cs.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libsnark/relations/constraint_satisfaction_problems/r1cs/r1cs.tcc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="49" lean-forward="true" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libsnark/zk_proof_systems/ppzksnark/r1cs_ppzksnark/profiling/profile_r1cs_ppzksnark.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -1267,7 +1108,7 @@
     <entry file="file://$PROJECT_DIR$/libsnark/zk_proof_systems/ppzksnark/r1cs_se_ppzksnark/profiling/profile_r1cs_se_ppzksnark.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
-          <caret line="53" column="35" lean-forward="true" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
+          <caret line="53" column="35" lean-forward="false" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -1288,11 +1129,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_components.tcc">
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1122">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_components.tcc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="57" column="35" lean-forward="false" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libsnark/zk_proof_systems/ppzksnark/r1cs_gg_ppzksnark/examples/run_r1cs_gg_ppzksnark.tcc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="e#610#628#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libsnark/zk_proof_systems/ppzksnark/r1cs_gg_ppzksnark/examples/run_r1cs_gg_ppzksnark.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="29" column="26" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="26" />
+          <folding>
+            <element signature="e#573#622#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libsnark/zk_proof_systems/ppzksnark/r1cs_gg_ppzksnark/tests/test_r1cs_gg_ppzksnark.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="28" column="41" lean-forward="true" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+          <folding>
+            <element signature="e#531#549#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
