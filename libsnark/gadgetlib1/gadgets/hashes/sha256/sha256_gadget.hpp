@@ -87,6 +87,7 @@ public:
     static size_t get_block_len();
     static size_t get_digest_len();
     static libff::bit_vector get_hash(const libff::bit_vector &input);
+    static sha256_two_to_one_hash_gadget<FieldT> get_gadget(const libff::bit_vector &input);
 
     static size_t expected_constraints(const bool ensure_output_bitness=true); // TODO: ignored for now
 };

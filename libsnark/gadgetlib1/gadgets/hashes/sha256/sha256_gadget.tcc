@@ -219,6 +219,24 @@ libff::bit_vector sha256_two_to_one_hash_gadget<FieldT>::get_hash(const libff::b
 }
 
 template<typename FieldT>
+sha256_two_to_one_hash_gadget<FieldT> sha256_two_to_one_hash_gadget<FieldT>::get_gadget(const libff::bit_vector &input)
+{
+    protoboard<FieldT> pb;
+
+    block_variable<FieldT> input_variable(pb, SHA256_block_size, "input");
+    digest_variable<FieldT> output_variable(pb, SHA256_digest_size, "output");
+    sha256_two_to_one_hash_gadget<FieldT> f(pb, SHA256_block_size, input_variable, output_variable, "f");
+
+    input_variable.generate_r1cs_witness(input);
+//    f.generate_r1cs_witness();
+
+//    return output_variable.get_digest();
+    return f;
+}
+
+
+
+template<typename FieldT>
 size_t sha256_two_to_one_hash_gadget<FieldT>::expected_constraints(const bool ensure_output_bitness)
 {
     libff::UNUSED(ensure_output_bitness);

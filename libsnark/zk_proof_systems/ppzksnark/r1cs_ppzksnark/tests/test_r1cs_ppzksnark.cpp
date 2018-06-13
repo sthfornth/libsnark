@@ -27,7 +27,8 @@ void test_r1cs_ppzksnark(size_t num_constraints,
     libff::print_header("(enter) Test R1CS ppzkSNARK");
 
     const bool test_serialization = true;
-    r1cs_example<libff::Fr<ppT> > example = generate_r1cs_example_with_binary_input<libff::Fr<ppT> >(num_constraints, input_size);
+    r1cs_example<libff::Fr<ppT> > example = generate_r1cs_example_with_sha2<libff::Fr<ppT> >("a", "b", 0, 1, 0, 1, num_constraints, input_size);
+    //generate_r1cs_example_with_binary_input<libff::Fr<ppT> >(num_constraints, input_size);
     const bool bit = run_r1cs_ppzksnark<ppT>(example, test_serialization);
     assert(bit);
 

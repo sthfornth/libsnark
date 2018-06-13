@@ -13,7 +13,9 @@
 #ifndef R1CS_EXAMPLES_HPP_
 #define R1CS_EXAMPLES_HPP_
 
+#include <iostream>
 #include <libsnark/relations/constraint_satisfaction_problems/r1cs/r1cs.hpp>
+using namespace std;
 
 namespace libsnark {
 
@@ -65,6 +67,18 @@ r1cs_example<FieldT> generate_r1cs_example_with_field_input(const size_t num_con
 template<typename FieldT>
 r1cs_example<FieldT> generate_r1cs_example_with_binary_input(const size_t num_constraints,
                                                              const size_t num_inputs);
+
+/**
+ * Generate a R1CS example such that: [modified]
+ * - the number of constraints of the R1CS constraint system is num_constraints;
+ * - the number of variables of the R1CS constraint system is (approximately) num_constraints;
+ * - the number of inputs of the R1CS constraint system is num_inputs;
+ * - the R1CS input consists of hash values and text (as opposed to ``full'' field elements).
+ */
+template<typename FieldT>
+r1cs_example<FieldT> generate_r1cs_example_with_sha2(string a, string b, int a1, int a2, int b1, int b2, const size_t num_constraints,
+                                                                 const size_t num_inputs);
+
 
 } // libsnark
 

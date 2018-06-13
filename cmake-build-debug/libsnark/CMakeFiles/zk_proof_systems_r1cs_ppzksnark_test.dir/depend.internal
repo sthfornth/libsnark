@@ -7,9 +7,27 @@ libsnark/CMakeFiles/zk_proof_systems_r1cs_ppzksnark_test.dir/zk_proof_systems/pp
  .././depends/ate-pairing/include/zm2.h
  .././libsnark/common/data_structures/accumulation_vector.hpp
  .././libsnark/common/data_structures/accumulation_vector.tcc
+ .././libsnark/common/data_structures/merkle_tree.hpp
+ .././libsnark/common/data_structures/merkle_tree.tcc
  .././libsnark/common/data_structures/sparse_vector.hpp
  .././libsnark/common/data_structures/sparse_vector.tcc
  .././libsnark/common/default_types/r1cs_ppzksnark_pp.hpp
+ .././libsnark/gadgetlib1/gadget.hpp
+ .././libsnark/gadgetlib1/gadget.tcc
+ .././libsnark/gadgetlib1/gadgets/basic_gadgets.hpp
+ .././libsnark/gadgetlib1/gadgets/basic_gadgets.tcc
+ .././libsnark/gadgetlib1/gadgets/hashes/hash_io.hpp
+ .././libsnark/gadgetlib1/gadgets/hashes/hash_io.tcc
+ .././libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_aux.hpp
+ .././libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_aux.tcc
+ .././libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_components.hpp
+ .././libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_components.tcc
+ .././libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_gadget.hpp
+ .././libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_gadget.tcc
+ .././libsnark/gadgetlib1/pb_variable.hpp
+ .././libsnark/gadgetlib1/pb_variable.tcc
+ .././libsnark/gadgetlib1/protoboard.hpp
+ .././libsnark/gadgetlib1/protoboard.tcc
  .././libsnark/knowledge_commitment/kc_multiexp.hpp
  .././libsnark/knowledge_commitment/kc_multiexp.tcc
  .././libsnark/knowledge_commitment/knowledge_commitment.hpp
