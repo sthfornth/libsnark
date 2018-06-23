@@ -86,8 +86,11 @@ public:
 
     static size_t get_block_len();
     static size_t get_digest_len();
+    static libff::bit_vector get_hash_with_pb(protoboard<FieldT> &pb, const libff::bit_vector &input);
+    static libff::bit_vector get_hash_and_generate_constraint_with_pb_unit(protoboard<FieldT> &pb, const libff::bit_vector &input);
+    static libff::bit_vector get_hash_and_generate_constraint_with_pb(protoboard<FieldT> &pb, const libff::bit_vector &input);
     static libff::bit_vector get_hash(const libff::bit_vector &input);
-    static sha256_two_to_one_hash_gadget<FieldT> get_gadget(const libff::bit_vector &input);
+//    static sha256_two_to_one_hash_gadget<FieldT> get_gadget(const libff::bit_vector &input);
 
     static size_t expected_constraints(const bool ensure_output_bitness=true); // TODO: ignored for now
 };

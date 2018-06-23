@@ -69,16 +69,21 @@ r1cs_example<FieldT> generate_r1cs_example_with_binary_input(const size_t num_co
                                                              const size_t num_inputs);
 
 /**
- * Generate a R1CS example such that: [modified]
- * - the number of constraints of the R1CS constraint system is num_constraints;
- * - the number of variables of the R1CS constraint system is (approximately) num_constraints;
- * - the number of inputs of the R1CS constraint system is num_inputs;
- * - the R1CS input consists of hash values and text (as opposed to ``full'' field elements).
+ * Generate a R1CS example such that:
+ * a[a1:a2] == b[b1:b2]
  */
 template<typename FieldT>
-r1cs_example<FieldT> generate_r1cs_example_with_sha2(string a, string b, int a1, int a2, int b1, int b2, const size_t num_constraints,
-                                                                 const size_t num_inputs);
+r1cs_example<FieldT> generate_r1cs_example_with_sha2(string a, string b, int a1, int a2, int b1, int b2);
 
+/**
+ * Generate a R1CS example such that:
+ * a[a1:a2] == b[b1:b2] and len(a) <= limit
+ */
+template<typename FieldT>
+r1cs_example<FieldT> generate_r1cs_example_with_sha2_limit_len(string a, string b, int a1, int a2, int b1, int b2, int limit);
+
+//template<typename FieldT>
+//r1cs_example<FieldT> generate_r1cs_example_with_sha2_multistring(string a, string b, int a1, int a2, int b1, int b2);
 
 } // libsnark
 

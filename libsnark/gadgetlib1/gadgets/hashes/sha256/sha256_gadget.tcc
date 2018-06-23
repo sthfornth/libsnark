@@ -204,10 +204,8 @@ size_t sha256_two_to_one_hash_gadget<FieldT>::get_digest_len()
 }
 
 template<typename FieldT>
-libff::bit_vector sha256_two_to_one_hash_gadget<FieldT>::get_hash(const libff::bit_vector &input)
+libff::bit_vector sha256_two_to_one_hash_gadget<FieldT>::get_hash_with_pb(protoboard<FieldT> &pb, const libff::bit_vector &input)
 {
-    protoboard<FieldT> pb;
-
     block_variable<FieldT> input_variable(pb, SHA256_block_size, "input");
     digest_variable<FieldT> output_variable(pb, SHA256_digest_size, "output");
     sha256_two_to_one_hash_gadget<FieldT> f(pb, SHA256_block_size, input_variable, output_variable, "f");
@@ -219,22 +217,44 @@ libff::bit_vector sha256_two_to_one_hash_gadget<FieldT>::get_hash(const libff::b
 }
 
 template<typename FieldT>
-sha256_two_to_one_hash_gadget<FieldT> sha256_two_to_one_hash_gadget<FieldT>::get_gadget(const libff::bit_vector &input)
-{
-    protoboard<FieldT> pb;
-
+libff::bit_vector sha256_two_to_one_hash_gadget<FieldT>::get_hash_and_generate_constraint_with_pb_unit(
+        protoboard <FieldT> &pb, const libff::bit_vector &input){
     block_variable<FieldT> input_variable(pb, SHA256_block_size, "input");
     digest_variable<FieldT> output_variable(pb, SHA256_digest_size, "output");
     sha256_two_to_one_hash_gadget<FieldT> f(pb, SHA256_block_size, input_variable, output_variable, "f");
 
     input_variable.generate_r1cs_witness(input);
-//    f.generate_r1cs_witness();
+    f.generate_r1cs_witness();
+    f.generate_r1cs_constraints();
 
-//    return output_variable.get_digest();
-    return f;
+    return output_variable.get_digest();
+}
+
+//slicing
+template<typename FieldT>
+libff::bit_vector sha256_two_to_one_hash_gadget<FieldT>::get_hash_and_generate_constraint_with_pb(
+        protoboard <FieldT> &pb, const libff::bit_vector &input){
+
+    libff::bit_vector tmp;
+    for(int i = 0; i < SHA256_digest_size; i ++)
+        tmp.push_back(input[i]);
+
+    for(unsigned long i = 1; i * SHA256_digest_size < input.size(); i ++){
+        for(int j = 0; j < SHA256_digest_size; j ++)
+            tmp.push_back(input[i*SHA256_digest_size + j]);
+        tmp = get_hash_and_generate_constraint_with_pb_unit(pb, tmp);
+    }
+
+    return tmp;
 }
 
 
+    template<typename FieldT>
+libff::bit_vector sha256_two_to_one_hash_gadget<FieldT>::get_hash(const libff::bit_vector &input)
+{
+    protoboard<FieldT> pb;
+    return get_hash(pb, input);
+}
 
 template<typename FieldT>
 size_t sha256_two_to_one_hash_gadget<FieldT>::expected_constraints(const bool ensure_output_bitness)

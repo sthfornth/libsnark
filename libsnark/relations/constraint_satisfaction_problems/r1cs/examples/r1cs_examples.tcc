@@ -161,95 +161,182 @@ r1cs_example<FieldT> generate_r1cs_example_with_binary_input(const size_t num_co
 }
 
 template<typename FieldT>
-r1cs_example<FieldT> generate_r1cs_example_with_sha2(string a, string b, int a1, int a2, int b1, int b2, const size_t num_constraints,
-                                                             const size_t num_inputs)
+r1cs_example<FieldT> generate_r1cs_example_with_sha2(string a, string b, int a1, int a2, int b1, int b2)
 {
     libff::enter_block("Call to generate_r1cs_example_with_sha2");
 
-    assert(num_inputs >= 1);
-
     //digitize the string and padding
-    int a1_ = a1 * 8;
     libff::bit_vector atext = libff::string_to_bits_with_padding(a);
     libff::bit_vector btext = libff::string_to_bits_with_padding(b);
-    libff::bit_vector ahash = sha256_two_to_one_hash_gadget<FieldT>::get_hash(atext);
-    libff::bit_vector bhash = sha256_two_to_one_hash_gadget<FieldT>::get_hash(btext);
-    sha256_two_to_one_hash_gadget<FieldT> agadget = sha256_two_to_one_hash_gadget<FieldT>::get_gadget(atext);
-    sha256_two_to_one_hash_gadget<FieldT> bgadget = sha256_two_to_one_hash_gadget<FieldT>::get_gadget(btext);
-//    for (int i = 0; i < atext.size(); ++ i){
-//        printf("%d ", int(atext[i]));
-//    }
-//    puts("");
-    agadget.generate_r1cs_constraints();
+    libff::bit_vector text = atext;
+    text.insert(text.end(), btext.begin(), btext.end());
 
+    protoboard<FieldT> pb;
 
-    r1cs_constraint_system<FieldT> cs;
-    cs.primary_input_size = ahash.size() + bhash.size();
-    cs.auxiliary_input_size = atext.size() + btext.size(); /* we will add one auxiliary variable per constraint */
+    size_t r1cs_input_size = 512;
+    pb_variable_array<FieldT> r1cs_input;
+    r1cs_input.allocate(pb, r1cs_input_size, "r1cs_input");
+    pb.set_input_sizes(r1cs_input_size);
+    pb_variable_array<FieldT> text_input;
+    text_input.allocate(pb, text.size(), "text_input");
+    text_input.fill_with_bits(pb, text);
 
-    r1cs_variable_assignment<FieldT> full_variable_assignment;
-    // ahash -> full_variable_assignment
-    // bhash -> full_variable_assignment
-    // atext -> full_variable_assignment
-    // btext -> full_variable_assignment
-
-//    for (size_t i = 0; i < num_inputs; ++i)
-//    {
-//        full_variable_assignment.push_back(FieldT(std::rand() % 2));
-//    }
-
-//    size_t lastvar = num_inputs-1;
-//    for (size_t i = 0; i < num_constraints; ++i)
-//    {
-//        ++lastvar;
-//        const size_t u = (i == 0 ? std::rand() % num_inputs : std::rand() % i);
-//        const size_t v = (i == 0 ? std::rand() % num_inputs : std::rand() % i);
-//
-//        /* chose two random bits and XOR them together:
-//           res = u + v - 2 * u * v
-//           2 * u * v = u + v - res
-//        */
-//        linear_combination<FieldT> A, B, C;
-//        A.add_term(u+1, 2);
-//        B.add_term(v+1, 1);
-//        if (u == v)
-//        {
-//            C.add_term(u+1, 2);
-//        }
-//        else
-//        {
-//            C.add_term(u+1, 1);
-//            C.add_term(v+1, 1);
-//        }
-//        C.add_term(lastvar+1, -FieldT::one());
-//
-//        cs.add_constraint(r1cs_constraint<FieldT>(A, B, C));
-//        full_variable_assignment.push_back(full_variable_assignment[u] + full_variable_assignment[v] - full_variable_assignment[u] * full_variable_assignment[v] - full_variable_assignment[u] * full_variable_assignment[v]);
-//    }
-
+    a1 *= 8, a2 *= 8, b1 *= 8, b2 *= 8;
     assert (a2 - a1 == b2 - b1);
-    for (size_t i = 0; i < a2 - a1; ++i) {
-        linear_combination<FieldT> B, C;
-        B.add_term(cs.primary_input_size + a1 + i + 1, 1);
-        C.add_term(cs.primary_input_size + atext.size() + b1 + i + 1, 1);
-        cs.add_constraint(r1cs_constraint<FieldT>(1, B, C));
+    for (int i = 0; i < a2 - a1; ++i) {
+        pb_linear_combination<FieldT> B, C;
+        B.add_term(r1cs_input_size + a1 + i + 1, 1);
+        C.add_term(r1cs_input_size + atext.size() + b1 + i + 1, 1);
+        pb.add_r1cs_constraint(r1cs_constraint<FieldT>(1, B, C));
     }
 
-    /* split variable assignment */
-    r1cs_primary_input<FieldT> primary_input(full_variable_assignment.begin(), full_variable_assignment.begin() + num_inputs);
-    r1cs_primary_input<FieldT> auxiliary_input(full_variable_assignment.begin() + num_inputs, full_variable_assignment.end());
+    libff::bit_vector ahash = sha256_two_to_one_hash_gadget<FieldT>::get_hash_and_generate_constraint_with_pb(pb, atext);
+    libff::bit_vector bhash = sha256_two_to_one_hash_gadget<FieldT>::get_hash_and_generate_constraint_with_pb(pb, btext);
+    libff::bit_vector input_bits = ahash;
+    input_bits.insert(input_bits.end(), bhash.begin(), bhash.end());
+    r1cs_input.fill_with_bits(pb, input_bits);
+
+    r1cs_constraint_system<FieldT> cs = pb.get_constraint_system();
+//    printf("%d\n", cs.constraints.size());
+    r1cs_variable_assignment<FieldT> full_variable_assignment = pb.full_variable_assignment();
+//    printf("%d\n", full_variable_assignment.size());
+    r1cs_primary_input<FieldT> primary_input = pb.primary_input();
+//    printf("%d\n", primary_input.size());
+    r1cs_primary_input<FieldT> auxiliary_input = pb.auxiliary_input();
 
     /* sanity checks */
     assert(cs.num_variables() == full_variable_assignment.size());
-    assert(cs.num_variables() >= num_inputs);
-    assert(cs.num_inputs() == num_inputs);
-    assert(cs.num_constraints() == num_constraints);
-    assert(cs.is_satisfied(primary_input, auxiliary_input));
+//    assert(cs.is_satisfied(primary_input, auxiliary_input));
 
     libff::leave_block("Call to generate_r1cs_example_with_sha2");
 
     return r1cs_example<FieldT>(std::move(cs), std::move(primary_input), std::move(auxiliary_input));
 }
+
+template<typename FieldT>
+r1cs_example<FieldT> generate_r1cs_example_with_sha2_limit_len(string a, string b, int a1, int a2, int b1, int b2, int limit)
+{
+    libff::enter_block("Call to generate_r1cs_example_with_sha2");
+
+    while (a.size() <= limit)
+        a += char(96);
+
+    //digitize the string and padding
+    libff::bit_vector atext = libff::string_to_bits_with_padding(a);
+    libff::bit_vector btext = libff::string_to_bits_with_padding(b);
+    libff::bit_vector text = atext;
+    text.insert(text.end(), btext.begin(), btext.end());
+
+    protoboard<FieldT> pb;
+
+    size_t r1cs_input_size = 512;
+    pb_variable_array<FieldT> r1cs_input;
+    r1cs_input.allocate(pb, r1cs_input_size, "r1cs_input");
+    pb.set_input_sizes(r1cs_input_size);
+    pb_variable_array<FieldT> text_input;
+    text_input.allocate(pb, text.size(), "text_input");
+    text_input.fill_with_bits(pb, text);
+
+    a1 *= 8, a2 *= 8, b1 *= 8, b2 *= 8;
+    assert (a2 - a1 == b2 - b1);
+    for (int i = 0; i < a2 - a1; ++i) {
+        pb_linear_combination<FieldT> B, C;
+        B.add_term(r1cs_input_size + a1 + i + 1, 1);
+        C.add_term(r1cs_input_size + atext.size() + b1 + i + 1, 1);
+        pb.add_r1cs_constraint(r1cs_constraint<FieldT>(1, B, C));
+    }
+    for (int i = 0; i < 8; ++ i){
+        int pos = limit * 8 + i, val = int(i == 1 or i == 2);
+        pb_linear_combination<FieldT> B, C;
+        B.add_term(r1cs_input_size + pos + 1, 1);
+        C.add_term(0, val);
+        pb.add_r1cs_constraint(r1cs_constraint<FieldT>(1, B, C));
+    }
+
+    libff::bit_vector ahash = sha256_two_to_one_hash_gadget<FieldT>::get_hash_and_generate_constraint_with_pb(pb, atext);
+    libff::bit_vector bhash = sha256_two_to_one_hash_gadget<FieldT>::get_hash_and_generate_constraint_with_pb(pb, btext);
+    libff::bit_vector input_bits = ahash;
+    input_bits.insert(input_bits.end(), bhash.begin(), bhash.end());
+    r1cs_input.fill_with_bits(pb, input_bits);
+
+    r1cs_constraint_system<FieldT> cs = pb.get_constraint_system();
+//    printf("%d\n", cs.constraints.size());
+    r1cs_variable_assignment<FieldT> full_variable_assignment = pb.full_variable_assignment();
+//    printf("%d\n", full_variable_assignment.size());
+    r1cs_primary_input<FieldT> primary_input = pb.primary_input();
+//    printf("%d\n", primary_input.size());
+    r1cs_primary_input<FieldT> auxiliary_input = pb.auxiliary_input();
+
+    /* sanity checks */
+    assert(cs.num_variables() == full_variable_assignment.size());
+//    assert(cs.is_satisfied(primary_input, auxiliary_input));
+
+    libff::leave_block("Call to generate_r1cs_example_with_sha2");
+
+    return r1cs_example<FieldT>(std::move(cs), std::move(primary_input), std::move(auxiliary_input));
+}
+
+
+
+//template<typename FieldT>
+//r1cs_example<FieldT> generate_r1cs_example_with_sha2_multistring(vector<string> s, vector<int> l, vector<int> r)
+//{
+//    libff::enter_block("Call to generate_r1cs_example_with_sha2");
+//    assert(s.size() == l.size() && s.size() == r.size());
+//    int n = s.size();
+//    for(int i = 0; i < n; i ++){
+//
+//    }
+//    //digitize the string and padding
+//    libff::bit_vector atext = libff::string_to_bits_with_padding(a);
+//    libff::bit_vector btext = libff::string_to_bits_with_padding(b);
+//    libff::bit_vector text = atext;
+//    text.insert(text.end(), btext.begin(), btext.end());
+//
+//    protoboard<FieldT> pb;
+//
+//    size_t r1cs_input_size = 512;
+//    pb_variable_array<FieldT> r1cs_input;
+//    r1cs_input.allocate(pb, r1cs_input_size, "r1cs_input");
+//    pb.set_input_sizes(r1cs_input_size);
+//    pb_variable_array<FieldT> text_input;
+//    text_input.allocate(pb, text.size(), "text_input");
+//    text_input.fill_with_bits(pb, text);
+//
+//    a1 *= 8, a2 *= 8, b1 *= 8, b2 *= 8;
+//    assert (a2 - a1 == b2 - b1);
+//    for (int i = 0; i < a2 - a1; ++i) {
+//        pb_linear_combination<FieldT> B, C;
+//        B.add_term(r1cs_input_size + a1 + i + 1, 1);
+//        C.add_term(r1cs_input_size + atext.size() + b1 + i + 1, 1);
+//        pb.add_r1cs_constraint(r1cs_constraint<FieldT>(1, B, C));
+//    }
+//    int bound;
+//    assert(s[0].size() < bound);
+//
+//
+//    libff::bit_vector ahash = sha256_two_to_one_hash_gadget<FieldT>::get_hash_and_generate_constraint_with_pb(pb, atext);
+//    libff::bit_vector bhash = sha256_two_to_one_hash_gadget<FieldT>::get_hash_and_generate_constraint_with_pb(pb, btext);
+//    libff::bit_vector input_bits = ahash;
+//    input_bits.insert(input_bits.end(), bhash.begin(), bhash.end());
+//    r1cs_input.fill_with_bits(pb, input_bits);
+//
+//    r1cs_constraint_system<FieldT> cs = pb.get_constraint_system();
+////    printf("%d\n", cs.constraints.size());
+//    r1cs_variable_assignment<FieldT> full_variable_assignment = pb.full_variable_assignment();
+////    printf("%d\n", full_variable_assignment.size());
+//    r1cs_primary_input<FieldT> primary_input = pb.primary_input();
+////    printf("%d\n", primary_input.size());
+//    r1cs_primary_input<FieldT> auxiliary_input = pb.auxiliary_input();
+//
+//    /* sanity checks */
+//    assert(cs.num_variables() == full_variable_assignment.size());
+//    assert(cs.is_satisfied(primary_input, auxiliary_input));
+//
+//    libff::leave_block("Call to generate_r1cs_example_with_sha2");
+//
+//    return r1cs_example<FieldT>(std::move(cs), std::move(primary_input), std::move(auxiliary_input));
+//}
 
 
 } // libsnark
