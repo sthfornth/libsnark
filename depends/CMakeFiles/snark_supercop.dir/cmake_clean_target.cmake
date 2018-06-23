@@ -1,3 +1,3 @@
 file(REMOVE_RECURSE
-  "libsnark_supercop.a"
+  "libsnark_supercopd.a"
 )

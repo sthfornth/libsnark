@@ -66,8 +66,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_lt.s.o"
   "CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/sc25519_sub_nored.s.o"
   "CMakeFiles/snark_supercop.dir/libsnark-supercop/src/crypto_sign/ed25519/amd64-51-30k/ull4_mul.s.o"
-  "libsnark_supercop.pdb"
-  "libsnark_supercop.a"
+  "libsnark_supercopd.pdb"
+  "libsnark_supercopd.a"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -5,4 +5,4 @@
 -- GMP: /usr/lib/x86_64-linux-gnu/libgmp.so, /usr/include/x86_64-linux-gnu
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/xinyue/libsnark/cmake-build-debug
+-- Build files have been written to: /home/xinyue/libsnark

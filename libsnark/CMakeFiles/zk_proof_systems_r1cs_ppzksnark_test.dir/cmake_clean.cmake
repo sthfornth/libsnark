@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/zk_proof_systems_r1cs_ppzksnark_test.dir/zk_proof_systems/ppzksnark/r1cs_ppzksnark/tests/test_r1cs_ppzksnark.cpp.o"
+  "CMakeFiles/zk_proof_systems_r1cs_ppzksnark_test.dir/common/string_to_bits.cpp.o"
   "zk_proof_systems_r1cs_ppzksnark_test.pdb"
   "zk_proof_systems_r1cs_ppzksnark_test"
 )

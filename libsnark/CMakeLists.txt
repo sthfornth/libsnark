@@ -549,7 +549,7 @@ add_executable(
   EXCLUDE_FROM_ALL
 
   zk_proof_systems/ppzksnark/r1cs_ppzksnark/tests/test_r1cs_ppzksnark.cpp
-)
+        common/string_to_bits.cpp common/string_to_bits.h)
 target_link_libraries(
   zk_proof_systems_r1cs_ppzksnark_test
 

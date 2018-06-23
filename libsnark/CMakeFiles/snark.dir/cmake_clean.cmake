@@ -20,8 +20,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/snark.dir/relations/ram_computations/memory/ra_memory.cpp.o"
   "CMakeFiles/snark.dir/relations/ram_computations/rams/fooram/fooram_aux.cpp.o"
   "CMakeFiles/snark.dir/relations/ram_computations/rams/tinyram/tinyram_aux.cpp.o"
-  "libsnark.pdb"
-  "libsnark.a"
+  "libsnarkd.pdb"
+  "libsnarkd.a"
 )
 
 # Per-language clean rules from dependency scanning.

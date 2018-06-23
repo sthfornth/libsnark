@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/snark_adsnark.dir/common/default_types/r1cs_ppzkadsnark_pp.cpp.o"
-  "libsnark_adsnark.pdb"
-  "libsnark_adsnark.a"
+  "libsnark_adsnarkd.pdb"
+  "libsnark_adsnarkd.a"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -19,6 +19,7 @@
 
 #include <libff/common/utils.hpp>
 #include <libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_gadget.hpp>
+#include <libsnark/common/string_to_bits.h>
 
 namespace libsnark {
 
@@ -166,8 +167,8 @@ r1cs_example<FieldT> generate_r1cs_example_with_sha2(string a, string b, int a1,
     libff::enter_block("Call to generate_r1cs_example_with_sha2");
 
     //digitize the string and padding
-    libff::bit_vector atext = libff::string_to_bits_with_padding(a);
-    libff::bit_vector btext = libff::string_to_bits_with_padding(b);
+    libff::bit_vector atext = string_to_bits_with_padding(a);
+    libff::bit_vector btext = string_to_bits_with_padding(b);
     libff::bit_vector text = atext;
     text.insert(text.end(), btext.begin(), btext.end());
 
@@ -222,8 +223,8 @@ r1cs_example<FieldT> generate_r1cs_example_with_sha2_limit_len(string a, string 
         a += char(96);
 
     //digitize the string and padding
-    libff::bit_vector atext = libff::string_to_bits_with_padding(a);
-    libff::bit_vector btext = libff::string_to_bits_with_padding(b);
+    libff::bit_vector atext = string_to_bits_with_padding(a);
+    libff::bit_vector btext = string_to_bits_with_padding(b);
     libff::bit_vector text = atext;
     text.insert(text.end(), btext.begin(), btext.end());
 
@@ -288,8 +289,8 @@ r1cs_example<FieldT> generate_r1cs_example_with_sha2_limit_len(string a, string 
 //
 //    }
 //    //digitize the string and padding
-//    libff::bit_vector atext = libff::string_to_bits_with_padding(a);
-//    libff::bit_vector btext = libff::string_to_bits_with_padding(b);
+//    libff::bit_vector atext = string_to_bits_with_padding(a);
+//    libff::bit_vector btext = string_to_bits_with_padding(b);
 //    libff::bit_vector text = atext;
 //    text.insert(text.end(), btext.begin(), btext.end());
 //

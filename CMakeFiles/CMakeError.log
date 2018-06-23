@@ -1,22 +1,22 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/xinyue/libsnark/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_0837e/fast"
-/usr/bin/make -f CMakeFiles/cmTC_0837e.dir/build.make CMakeFiles/cmTC_0837e.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_a814d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a814d.dir/build.make CMakeFiles/cmTC_a814d.dir/build
 make[1]: Entering directory '/home/xinyue/libsnark/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_0837e.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_0837e.dir/CheckSymbolExists.c.o   -c /home/xinyue/libsnark/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_0837e
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0837e.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_0837e.dir/CheckSymbolExists.c.o  -o cmTC_0837e 
-CMakeFiles/cmTC_0837e.dir/CheckSymbolExists.c.o: In function `main':
+Building C object CMakeFiles/cmTC_a814d.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_a814d.dir/CheckSymbolExists.c.o   -c /home/xinyue/libsnark/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_a814d
+/home/xinyue/clion-2017.3.4/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a814d.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_a814d.dir/CheckSymbolExists.c.o  -o cmTC_a814d 
+CMakeFiles/cmTC_a814d.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_0837e.dir/build.make:86: recipe for target 'cmTC_0837e' failed
-make[1]: *** [cmTC_0837e] Error 1
+CMakeFiles/cmTC_a814d.dir/build.make:97: recipe for target 'cmTC_a814d' failed
+make[1]: *** [cmTC_a814d] Error 1
 make[1]: Leaving directory '/home/xinyue/libsnark/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_0837e/fast' failed
-make: *** [cmTC_0837e/fast] Error 2
+Makefile:126: recipe for target 'cmTC_a814d/fast' failed
+make: *** [cmTC_a814d/fast] Error 2
 
 File /home/xinyue/libsnark/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */

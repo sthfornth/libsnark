@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/zm.dir/ate-pairing/src/zm.cpp.o"
   "CMakeFiles/zm.dir/ate-pairing/src/zm2.cpp.o"
-  "libzm.pdb"
-  "libzm.a"
+  "libzmd.pdb"
+  "libzmd.a"
 )
 
 # Per-language clean rules from dependency scanning.

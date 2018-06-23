@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/xinyue/libsnark/libsnark/common/string_to_bits.cpp" "/home/xinyue/libsnark/libsnark/CMakeFiles/zk_proof_systems_r1cs_ppzksnark_test.dir/common/string_to_bits.cpp.o"
   "/home/xinyue/libsnark/libsnark/zk_proof_systems/ppzksnark/r1cs_ppzksnark/tests/test_r1cs_ppzksnark.cpp" "/home/xinyue/libsnark/libsnark/CMakeFiles/zk_proof_systems_r1cs_ppzksnark_test.dir/zk_proof_systems/ppzksnark/r1cs_ppzksnark/tests/test_r1cs_ppzksnark.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
@@ -13,9 +14,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
   "BINARY_OUTPUT"
   "BN_SUPPORT_SNARK=1"
   "CURVE_BN128"
-  "LOWMEM=1"
   "MONTGOMERY_OUTPUT"
-  "MULTICORE=1"
   "NO_PROCPS"
   "USE_ASM"
   )

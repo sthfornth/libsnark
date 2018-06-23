@@ -16,9 +16,6 @@ Site: xinyue-XPS-13-9343
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
 BuildName: Linux-c++
 
-# Subprojects
-LabelsForSubprojects: 
-
 # Submission information
 IsCDash: 
 CDashVersion: 
@@ -36,8 +33,8 @@ ScpCommand: /usr/bin/scp
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/local/bin/cmake" "/home/xinyue/libsnark"
-MakeCommand: /usr/local/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
+ConfigureCommand: "/home/xinyue/clion-2017.3.4/bin/cmake/bin/cmake" "/home/xinyue/libsnark"
+MakeCommand: /home/xinyue/clion-2017.3.4/bin/cmake/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
 DefaultCTestConfigurationType: Release
 
 # version control

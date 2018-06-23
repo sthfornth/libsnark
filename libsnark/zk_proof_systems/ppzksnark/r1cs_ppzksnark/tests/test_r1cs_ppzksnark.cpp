@@ -72,14 +72,14 @@ int main()
     char buffer[100000];
     char *ptr = buffer;
     int m = 20 - 1;
-    for (int len = 5; len <= 10; len ++) {
+    for (int len = 5; len <= 5; len ++) {
         times.clear();
         int lenc = len;
         int la = rand() % (len * m + 1), ra = len * m - la;
 //        int lb = rand() % (len * m + 1), rb = len * m - la;
         int lb = 0, rb = 0;
         int limit = la + ra + lenc;
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 1; i++) {
             // len_a = la + ra + len_c, len_b = lb + rb + len_c
             test_r1cs_ppzksnark<default_r1cs_ppzksnark_pp>(la, ra, lb, rb, lenc);
 //            test_r1cs_ppzksnark_limit_len<default_r1cs_ppzksnark_pp>(la, ra, lb, rb, lenc, limit);
