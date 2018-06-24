@@ -214,6 +214,7 @@ r1cs_example<FieldT> generate_r1cs_example_with_sha2(string a, string b, int a1,
     return r1cs_example<FieldT>(std::move(cs), std::move(primary_input), std::move(auxiliary_input));
 }
 
+
 template<typename FieldT>
 r1cs_example<FieldT> generate_r1cs_example_with_sha2_limit_len(string a, string b, int a1, int a2, int b1, int b2, int limit)
 {
@@ -278,6 +279,133 @@ r1cs_example<FieldT> generate_r1cs_example_with_sha2_limit_len(string a, string 
 }
 
 
+template<typename FieldT>
+void add_length_constraint_with_pb(protoboard<FieldT> &pb, string a, int lowerbound, int upperbound){
+    if(lowerbound >= 1 && a.size() < lowerbound){
+        while (a.size() <= lowerbound)
+            a += char(96);
+    }else if(upperbound > 1 && a.size() >= upperbound){
+        while (a.size() <= upperbound)
+            a += char(96);
+    }
+
+    //digitize the string and padding
+    libff::bit_vector atext = string_to_bits_with_padding(a);
+    libff::bit_vector text = atext;
+    size_t r1cs_input_size = 512;
+
+//    for (int i = 0; i < 8; ++ i){
+//        int pos = lowerbound * 8 + i, val = int(i == 1 or i == 2);
+//        pb_linear_combination<FieldT> B, C;
+//        B.add_term(r1cs_input_size + pos + 1, 1);
+//        C.add_term(0, val);
+//        pb.add_r1cs_constraint(r1cs_constraint<FieldT>(1, B, C));
+//    }
+
+    for (int i = 0; i < 8; ++ i){
+        int pos = upperbound * 8 + i, val = int(i == 1 or i == 2);
+        pb_linear_combination<FieldT> B, C;
+        B.add_term(r1cs_input_size + pos + 1, 1);
+        C.add_term(0, val);
+        pb.add_r1cs_constraint(r1cs_constraint<FieldT>(1, B, C));
+    }
+
+}
+
+
+
+template<typename FieldT>
+void add_substring_constraint_with_pb(protoboard<FieldT> &pb, int a1, int a2, int b1, int b2, size_t r1cs_input_size){
+    for (int i = 0; i < a2 - a1; ++i) {
+        pb_linear_combination<FieldT> B, C;
+        B.add_term(r1cs_input_size + a1 + i + 1, 1);
+        C.add_term(r1cs_input_size + b1 + i + 1, 1);
+        pb.add_r1cs_constraint(r1cs_constraint<FieldT>(1, B, C));
+    }
+
+}
+
+template<typename FieldT>
+r1cs_example<FieldT> generate_r1cs_example(vector<string> s, vector<pair<int, int> > limit, vector<pair<int, int> > range) {
+    libff::enter_block("Call to generate_r1cs_example_with_xxx");
+    size_t n = s.size();
+
+    for(int i = 0; i < n; i ++){
+        if(limit[i].second > 0){
+            while (limit[i].second > s[i].size())
+                s[i] += char(96);
+        }
+    }
+
+    //digitize the string and padding
+    libff::bit_vector text;
+    text.clear();
+    for(int i = 0; i < n; i ++) {
+        libff::bit_vector itext = string_to_bits_with_padding(s[i]);
+        text.insert(text.end(), itext.begin(), itext.end());
+    }
+
+    protoboard<FieldT> pb;
+
+    size_t r1cs_input_size = 256 * n;
+    pb_variable_array<FieldT> r1cs_input;
+    r1cs_input.allocate(pb, r1cs_input_size, "r1cs_input");
+    pb.set_input_sizes(r1cs_input_size);
+    pb_variable_array<FieldT> text_input;
+    text_input.allocate(pb, text.size(), "text_input");
+    text_input.fill_with_bits(pb, text);
+
+
+    size_t a1 = 8 * range[0].first, a2 = 8 * range[0].second;
+    size_t prev = 0;
+    libff::bit_vector input_bits;
+    input_bits.clear();
+    for (int i = 0; i < n; i ++){
+        if(i != 0){//add substring constraint
+            size_t b1 = 8 * range[i].first, b2 = 8 * range[i].second;
+            for (int j = 0; j < a2 - a1; j ++) {
+                pb_linear_combination<FieldT> B, C;
+                B.add_term(r1cs_input_size + a1 + i + 1, 1);
+                C.add_term(r1cs_input_size + prev + b1 + i + 1, 1);
+                pb.add_r1cs_constraint(r1cs_constraint<FieldT>(1, B, C));
+            }
+        }
+        //add length constraint
+        if (limit[i].second >= 0)
+            for (int j = 0; j < 8; j ++){
+                int pos = prev + limit[i].second * 8 + j - 8, val = int(j == 1 or j == 2);
+                pb_linear_combination<FieldT> B, C;
+                B.add_term(r1cs_input_size + pos + 1, 1);
+                C.add_term(0, val);
+                pb.add_r1cs_constraint(r1cs_constraint<FieldT>(1, B, C));
+            }
+
+        libff::bit_vector itext = string_to_bits_with_padding(s[i]);
+        libff::bit_vector ihash = sha256_two_to_one_hash_gadget<FieldT>::get_hash_and_generate_constraint_with_pb(pb, itext);
+        input_bits.insert(input_bits.end(), ihash.begin(), ihash.end());
+        prev += itext.size();
+    }
+
+    r1cs_input.fill_with_bits(pb, input_bits);
+
+
+    r1cs_constraint_system<FieldT> cs = pb.get_constraint_system();
+//    printf("%d\n", cs.constraints.size());
+    r1cs_variable_assignment<FieldT> full_variable_assignment = pb.full_variable_assignment();
+//    printf("%d\n", full_variable_assignment.size());
+    r1cs_primary_input<FieldT> primary_input = pb.primary_input();
+//    printf("%d\n", primary_input.size());
+    r1cs_primary_input<FieldT> auxiliary_input = pb.auxiliary_input();
+
+    /* sanity checks */
+    assert(cs.num_variables() == full_variable_assignment.size());
+//    assert(cs.is_satisfied(primary_input, auxiliary_input));
+
+    libff::leave_block("Call to generate_r1cs_example_with_xxx");
+
+    return r1cs_example<FieldT>(std::move(cs), std::move(primary_input), std::move(auxiliary_input));
+
+}
 
 //template<typename FieldT>
 //r1cs_example<FieldT> generate_r1cs_example_with_sha2_multistring(vector<string> s, vector<int> l, vector<int> r)

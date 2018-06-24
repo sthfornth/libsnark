@@ -82,6 +82,10 @@ r1cs_example<FieldT> generate_r1cs_example_with_sha2(string a, string b, int a1,
 template<typename FieldT>
 r1cs_example<FieldT> generate_r1cs_example_with_sha2_limit_len(string a, string b, int a1, int a2, int b1, int b2, int limit);
 
+template<typename FieldT>
+r1cs_example<FieldT> generate_r1cs_example(vector<string> s, vector<pair<int, int> > limit, vector<pair<int, int> > range);
+
+
 //template<typename FieldT>
 //r1cs_example<FieldT> generate_r1cs_example_with_sha2_multistring(string a, string b, int a1, int a2, int b1, int b2);
 
