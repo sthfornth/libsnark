@@ -67,21 +67,11 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="edit_cache">
+			<Target title="doc">
 				<Option working_dir="/home/xinyue/libsnark"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="test">
-				<Option working_dir="/home/xinyue/libsnark"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/Makefile&quot;  VERBOSE=1 test"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/Makefile&quot;  VERBOSE=1 doc"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/Makefile&quot;  VERBOSE=1 clean"/>
@@ -97,11 +87,21 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="doc">
+			<Target title="test">
 				<Option working_dir="/home/xinyue/libsnark"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/Makefile&quot;  VERBOSE=1 doc"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/Makefile&quot;  VERBOSE=1 test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/xinyue/libsnark"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/Makefile&quot;  VERBOSE=1 edit_cache"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/Makefile&quot;  VERBOSE=1 clean"/>
@@ -117,6 +117,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -150,6 +151,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -183,6 +185,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -216,6 +219,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -249,6 +253,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -283,6 +288,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -317,6 +323,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -351,6 +358,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -375,70 +383,6 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/gtest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="gtest_main">
-				<Option output="/home/xinyue/libsnark/depends/gtest/googlemock/gtest/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/xinyue/libsnark/depends/gtest/googlemock/gtest"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DNO_PROCPS"/>
-					<Add option="-DCURVE_BN128"/>
-					<Add option="-DBN_SUPPORT_SNARK=1"/>
-					<Add option="-DBINARY_OUTPUT"/>
-					<Add option="-DMONTGOMERY_OUTPUT"/>
-					<Add option="-DUSE_ASM"/>
-					<Add directory="/home/xinyue/libsnark/."/>
-					<Add directory="/home/xinyue/libsnark/depends/gtest/googletest/include"/>
-					<Add directory="/home/xinyue/libsnark/depends/gtest/googletest"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/gtest/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest_main"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/gtest/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/gtest/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/gtest/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="gtest_main/fast">
-				<Option output="/home/xinyue/libsnark/depends/gtest/googlemock/gtest/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/xinyue/libsnark/depends/gtest/googlemock/gtest"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DNO_PROCPS"/>
-					<Add option="-DCURVE_BN128"/>
-					<Add option="-DBN_SUPPORT_SNARK=1"/>
-					<Add option="-DBINARY_OUTPUT"/>
-					<Add option="-DMONTGOMERY_OUTPUT"/>
-					<Add option="-DUSE_ASM"/>
-					<Add directory="/home/xinyue/libsnark/."/>
-					<Add directory="/home/xinyue/libsnark/depends/gtest/googletest/include"/>
-					<Add directory="/home/xinyue/libsnark/depends/gtest/googletest"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/gtest/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/gtest/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/gtest/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/gtest/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="gtest">
 				<Option output="/home/xinyue/libsnark/depends/gtest/googlemock/gtest/libgtestd.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/xinyue/libsnark/depends/gtest/googlemock/gtest"/>
@@ -449,6 +393,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -481,6 +426,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -503,72 +449,70 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/gtest/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="multiexp_profile">
-				<Option output="/home/xinyue/libsnark/depends/libff/libff/multiexp_profile" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/xinyue/libsnark/depends/libff/libff"/>
+			<Target title="gtest_main">
+				<Option output="/home/xinyue/libsnark/depends/gtest/googlemock/gtest/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xinyue/libsnark/depends/gtest/googlemock/gtest"/>
 				<Option object_output="./"/>
-				<Option type="1"/>
+				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
 					<Add directory="/home/xinyue/libsnark/."/>
-					<Add directory="/home/xinyue/libsnark/depends/ate-pairing/include"/>
-					<Add directory="/home/xinyue/libsnark/depends/xbyak"/>
-					<Add directory="/home/xinyue/libsnark/depends/libsnark-supercop/include"/>
-					<Add directory="/home/xinyue/libsnark/depends/libff/libff/.."/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/home/xinyue/libsnark/depends/gtest/googletest/include"/>
+					<Add directory="/home/xinyue/libsnark/depends/gtest/googletest"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libff/libff/Makefile&quot;  VERBOSE=1 multiexp_profile"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libff/libff/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libff/libff/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libff/libff/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/gtest/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/gtest/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/gtest/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/gtest/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="multiexp_profile/fast">
-				<Option output="/home/xinyue/libsnark/depends/libff/libff/multiexp_profile" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/xinyue/libsnark/depends/libff/libff"/>
+			<Target title="gtest_main/fast">
+				<Option output="/home/xinyue/libsnark/depends/gtest/googlemock/gtest/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xinyue/libsnark/depends/gtest/googlemock/gtest"/>
 				<Option object_output="./"/>
-				<Option type="1"/>
+				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
 					<Add directory="/home/xinyue/libsnark/."/>
-					<Add directory="/home/xinyue/libsnark/depends/ate-pairing/include"/>
-					<Add directory="/home/xinyue/libsnark/depends/xbyak"/>
-					<Add directory="/home/xinyue/libsnark/depends/libsnark-supercop/include"/>
-					<Add directory="/home/xinyue/libsnark/depends/libff/libff/.."/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/home/xinyue/libsnark/depends/gtest/googletest/include"/>
+					<Add directory="/home/xinyue/libsnark/depends/gtest/googletest"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libff/libff/Makefile&quot;  VERBOSE=1 multiexp_profile/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libff/libff/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libff/libff/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libff/libff/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/gtest/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/gtest/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/gtest/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/gtest/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ff">
@@ -581,6 +525,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -615,6 +560,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -639,9 +585,9 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libff/libff/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="lagrange_polynomial_evaluation">
-				<Option output="/home/xinyue/libsnark/depends/libfqfft/tutorials/lagrange_polynomial_evaluation" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/xinyue/libsnark/depends/libfqfft/tutorials"/>
+			<Target title="multiexp_profile">
+				<Option output="/home/xinyue/libsnark/depends/libff/libff/multiexp_profile" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xinyue/libsnark/depends/libff/libff"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -649,6 +595,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -656,8 +603,6 @@
 					<Add directory="/home/xinyue/libsnark/depends/ate-pairing/include"/>
 					<Add directory="/home/xinyue/libsnark/depends/xbyak"/>
 					<Add directory="/home/xinyue/libsnark/depends/libsnark-supercop/include"/>
-					<Add directory="/home/xinyue/libsnark/depends/libfqfft/."/>
-					<Add directory="/home/xinyue/libsnark/depends/libff"/>
 					<Add directory="/home/xinyue/libsnark/depends/libff/libff/.."/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include/c++/5"/>
@@ -669,15 +614,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 lagrange_polynomial_evaluation"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libff/libff/Makefile&quot;  VERBOSE=1 multiexp_profile"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libff/libff/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libff/libff/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libff/libff/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="lagrange_polynomial_evaluation/fast">
-				<Option output="/home/xinyue/libsnark/depends/libfqfft/tutorials/lagrange_polynomial_evaluation" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/xinyue/libsnark/depends/libfqfft/tutorials"/>
+			<Target title="multiexp_profile/fast">
+				<Option output="/home/xinyue/libsnark/depends/libff/libff/multiexp_profile" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xinyue/libsnark/depends/libff/libff"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -685,6 +630,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -692,8 +638,6 @@
 					<Add directory="/home/xinyue/libsnark/depends/ate-pairing/include"/>
 					<Add directory="/home/xinyue/libsnark/depends/xbyak"/>
 					<Add directory="/home/xinyue/libsnark/depends/libsnark-supercop/include"/>
-					<Add directory="/home/xinyue/libsnark/depends/libfqfft/."/>
-					<Add directory="/home/xinyue/libsnark/depends/libff"/>
 					<Add directory="/home/xinyue/libsnark/depends/libff/libff/.."/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include/c++/5"/>
@@ -705,82 +649,10 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 lagrange_polynomial_evaluation/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="polynomial_evaluation">
-				<Option output="/home/xinyue/libsnark/depends/libfqfft/tutorials/polynomial_evaluation" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/xinyue/libsnark/depends/libfqfft/tutorials"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DNO_PROCPS"/>
-					<Add option="-DCURVE_BN128"/>
-					<Add option="-DBN_SUPPORT_SNARK=1"/>
-					<Add option="-DBINARY_OUTPUT"/>
-					<Add option="-DMONTGOMERY_OUTPUT"/>
-					<Add option="-DUSE_ASM"/>
-					<Add directory="/home/xinyue/libsnark/."/>
-					<Add directory="/home/xinyue/libsnark/depends/ate-pairing/include"/>
-					<Add directory="/home/xinyue/libsnark/depends/xbyak"/>
-					<Add directory="/home/xinyue/libsnark/depends/libsnark-supercop/include"/>
-					<Add directory="/home/xinyue/libsnark/depends/libfqfft/."/>
-					<Add directory="/home/xinyue/libsnark/depends/libff"/>
-					<Add directory="/home/xinyue/libsnark/depends/libff/libff/.."/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 polynomial_evaluation"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="polynomial_evaluation/fast">
-				<Option output="/home/xinyue/libsnark/depends/libfqfft/tutorials/polynomial_evaluation" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/xinyue/libsnark/depends/libfqfft/tutorials"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DNO_PROCPS"/>
-					<Add option="-DCURVE_BN128"/>
-					<Add option="-DBN_SUPPORT_SNARK=1"/>
-					<Add option="-DBINARY_OUTPUT"/>
-					<Add option="-DMONTGOMERY_OUTPUT"/>
-					<Add option="-DUSE_ASM"/>
-					<Add directory="/home/xinyue/libsnark/."/>
-					<Add directory="/home/xinyue/libsnark/depends/ate-pairing/include"/>
-					<Add directory="/home/xinyue/libsnark/depends/xbyak"/>
-					<Add directory="/home/xinyue/libsnark/depends/libsnark-supercop/include"/>
-					<Add directory="/home/xinyue/libsnark/depends/libfqfft/."/>
-					<Add directory="/home/xinyue/libsnark/depends/libff"/>
-					<Add directory="/home/xinyue/libsnark/depends/libff/libff/.."/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 polynomial_evaluation/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libff/libff/Makefile&quot;  VERBOSE=1 multiexp_profile/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libff/libff/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libff/libff/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libff/libff/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="polynomial_multiplication">
@@ -793,6 +665,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -829,6 +702,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -850,6 +724,154 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 polynomial_multiplication/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="polynomial_evaluation">
+				<Option output="/home/xinyue/libsnark/depends/libfqfft/tutorials/polynomial_evaluation" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xinyue/libsnark/depends/libfqfft/tutorials"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DNO_PROCPS"/>
+					<Add option="-DCURVE_BN128"/>
+					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
+					<Add option="-DBINARY_OUTPUT"/>
+					<Add option="-DMONTGOMERY_OUTPUT"/>
+					<Add option="-DUSE_ASM"/>
+					<Add directory="/home/xinyue/libsnark/."/>
+					<Add directory="/home/xinyue/libsnark/depends/ate-pairing/include"/>
+					<Add directory="/home/xinyue/libsnark/depends/xbyak"/>
+					<Add directory="/home/xinyue/libsnark/depends/libsnark-supercop/include"/>
+					<Add directory="/home/xinyue/libsnark/depends/libfqfft/."/>
+					<Add directory="/home/xinyue/libsnark/depends/libff"/>
+					<Add directory="/home/xinyue/libsnark/depends/libff/libff/.."/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 polynomial_evaluation"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="polynomial_evaluation/fast">
+				<Option output="/home/xinyue/libsnark/depends/libfqfft/tutorials/polynomial_evaluation" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xinyue/libsnark/depends/libfqfft/tutorials"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DNO_PROCPS"/>
+					<Add option="-DCURVE_BN128"/>
+					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
+					<Add option="-DBINARY_OUTPUT"/>
+					<Add option="-DMONTGOMERY_OUTPUT"/>
+					<Add option="-DUSE_ASM"/>
+					<Add directory="/home/xinyue/libsnark/."/>
+					<Add directory="/home/xinyue/libsnark/depends/ate-pairing/include"/>
+					<Add directory="/home/xinyue/libsnark/depends/xbyak"/>
+					<Add directory="/home/xinyue/libsnark/depends/libsnark-supercop/include"/>
+					<Add directory="/home/xinyue/libsnark/depends/libfqfft/."/>
+					<Add directory="/home/xinyue/libsnark/depends/libff"/>
+					<Add directory="/home/xinyue/libsnark/depends/libff/libff/.."/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 polynomial_evaluation/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lagrange_polynomial_evaluation">
+				<Option output="/home/xinyue/libsnark/depends/libfqfft/tutorials/lagrange_polynomial_evaluation" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xinyue/libsnark/depends/libfqfft/tutorials"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DNO_PROCPS"/>
+					<Add option="-DCURVE_BN128"/>
+					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
+					<Add option="-DBINARY_OUTPUT"/>
+					<Add option="-DMONTGOMERY_OUTPUT"/>
+					<Add option="-DUSE_ASM"/>
+					<Add directory="/home/xinyue/libsnark/."/>
+					<Add directory="/home/xinyue/libsnark/depends/ate-pairing/include"/>
+					<Add directory="/home/xinyue/libsnark/depends/xbyak"/>
+					<Add directory="/home/xinyue/libsnark/depends/libsnark-supercop/include"/>
+					<Add directory="/home/xinyue/libsnark/depends/libfqfft/."/>
+					<Add directory="/home/xinyue/libsnark/depends/libff"/>
+					<Add directory="/home/xinyue/libsnark/depends/libff/libff/.."/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 lagrange_polynomial_evaluation"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lagrange_polynomial_evaluation/fast">
+				<Option output="/home/xinyue/libsnark/depends/libfqfft/tutorials/lagrange_polynomial_evaluation" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xinyue/libsnark/depends/libfqfft/tutorials"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DNO_PROCPS"/>
+					<Add option="-DCURVE_BN128"/>
+					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
+					<Add option="-DBINARY_OUTPUT"/>
+					<Add option="-DMONTGOMERY_OUTPUT"/>
+					<Add option="-DUSE_ASM"/>
+					<Add directory="/home/xinyue/libsnark/."/>
+					<Add directory="/home/xinyue/libsnark/depends/ate-pairing/include"/>
+					<Add directory="/home/xinyue/libsnark/depends/xbyak"/>
+					<Add directory="/home/xinyue/libsnark/depends/libsnark-supercop/include"/>
+					<Add directory="/home/xinyue/libsnark/depends/libfqfft/."/>
+					<Add directory="/home/xinyue/libsnark/depends/libff"/>
+					<Add directory="/home/xinyue/libsnark/depends/libff/libff/.."/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 lagrange_polynomial_evaluation/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/depends/libfqfft/tutorials/Makefile&quot;  VERBOSE=1 clean"/>
@@ -885,6 +907,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -919,6 +942,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -953,6 +977,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -986,6 +1011,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1019,6 +1045,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1052,6 +1079,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1085,6 +1113,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1118,6 +1147,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1151,6 +1181,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1184,6 +1215,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1217,6 +1249,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1250,6 +1283,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1283,6 +1317,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1316,6 +1351,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1349,6 +1385,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1383,6 +1420,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1427,6 +1465,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1460,6 +1499,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1493,6 +1533,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1526,6 +1567,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1559,6 +1601,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1592,6 +1635,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1625,6 +1669,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1658,6 +1703,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1691,6 +1737,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1724,6 +1771,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1757,6 +1805,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1790,6 +1839,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1823,6 +1873,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1856,6 +1907,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1889,6 +1941,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1922,6 +1975,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1955,6 +2009,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -1988,6 +2043,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -2021,6 +2077,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -2054,6 +2111,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -2087,6 +2145,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -2121,6 +2180,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -2155,6 +2215,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -2188,6 +2249,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -2221,6 +2283,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -2254,6 +2317,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -2277,72 +2341,6 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/libsnark/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="snark">
-				<Option output="/home/xinyue/libsnark/libsnark/libsnarkd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/xinyue/libsnark/libsnark"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DNO_PROCPS"/>
-					<Add option="-DCURVE_BN128"/>
-					<Add option="-DBN_SUPPORT_SNARK=1"/>
-					<Add option="-DBINARY_OUTPUT"/>
-					<Add option="-DMONTGOMERY_OUTPUT"/>
-					<Add option="-DUSE_ASM"/>
-					<Add directory="/home/xinyue/libsnark/."/>
-					<Add directory="/home/xinyue/libsnark/depends/libff"/>
-					<Add directory="/home/xinyue/libsnark/depends/libfqfft"/>
-					<Add directory="/home/xinyue/libsnark/depends/libff/libff/.."/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/libsnark/Makefile&quot;  VERBOSE=1 snark"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/libsnark/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/libsnark/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/libsnark/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="snark/fast">
-				<Option output="/home/xinyue/libsnark/libsnark/libsnarkd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/xinyue/libsnark/libsnark"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DNO_PROCPS"/>
-					<Add option="-DCURVE_BN128"/>
-					<Add option="-DBN_SUPPORT_SNARK=1"/>
-					<Add option="-DBINARY_OUTPUT"/>
-					<Add option="-DMONTGOMERY_OUTPUT"/>
-					<Add option="-DUSE_ASM"/>
-					<Add directory="/home/xinyue/libsnark/."/>
-					<Add directory="/home/xinyue/libsnark/depends/libff"/>
-					<Add directory="/home/xinyue/libsnark/depends/libfqfft"/>
-					<Add directory="/home/xinyue/libsnark/depends/libff/libff/.."/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/libsnark/Makefile&quot;  VERBOSE=1 snark/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/libsnark/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/libsnark/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/libsnark/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="profile_r1cs_sp_ppzkpcd">
 				<Option output="/home/xinyue/libsnark/libsnark/profile_r1cs_sp_ppzkpcd" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/xinyue/libsnark/libsnark"/>
@@ -2353,6 +2351,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -2386,6 +2385,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -2419,6 +2419,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -2452,6 +2453,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -2485,6 +2487,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -2518,6 +2521,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -2551,6 +2555,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -2584,6 +2589,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -2607,6 +2613,74 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/libsnark/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="snark">
+				<Option output="/home/xinyue/libsnark/libsnark/libsnarkd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xinyue/libsnark/libsnark"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DNO_PROCPS"/>
+					<Add option="-DCURVE_BN128"/>
+					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
+					<Add option="-DBINARY_OUTPUT"/>
+					<Add option="-DMONTGOMERY_OUTPUT"/>
+					<Add option="-DUSE_ASM"/>
+					<Add directory="/home/xinyue/libsnark/."/>
+					<Add directory="/home/xinyue/libsnark/depends/libff"/>
+					<Add directory="/home/xinyue/libsnark/depends/libfqfft"/>
+					<Add directory="/home/xinyue/libsnark/depends/libff/libff/.."/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/libsnark/Makefile&quot;  VERBOSE=1 snark"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/libsnark/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/libsnark/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/libsnark/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="snark/fast">
+				<Option output="/home/xinyue/libsnark/libsnark/libsnarkd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xinyue/libsnark/libsnark"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DNO_PROCPS"/>
+					<Add option="-DCURVE_BN128"/>
+					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
+					<Add option="-DBINARY_OUTPUT"/>
+					<Add option="-DMONTGOMERY_OUTPUT"/>
+					<Add option="-DUSE_ASM"/>
+					<Add directory="/home/xinyue/libsnark/."/>
+					<Add directory="/home/xinyue/libsnark/depends/libff"/>
+					<Add directory="/home/xinyue/libsnark/depends/libfqfft"/>
+					<Add directory="/home/xinyue/libsnark/depends/libff/libff/.."/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/libsnark/Makefile&quot;  VERBOSE=1 snark/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/libsnark/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/libsnark/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xinyue/libsnark/libsnark/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="zk_proof_systems_r1cs_se_ppzksnark_test">
 				<Option output="/home/xinyue/libsnark/libsnark/zk_proof_systems_r1cs_se_ppzksnark_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/xinyue/libsnark/libsnark"/>
@@ -2617,6 +2691,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -2650,6 +2725,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -2683,6 +2759,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -2716,6 +2793,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -2749,6 +2827,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -2782,6 +2861,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -2815,6 +2895,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -2848,6 +2929,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -2881,6 +2963,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -2915,6 +2998,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -2949,6 +3033,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -2982,6 +3067,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3015,6 +3101,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3048,6 +3135,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3081,6 +3169,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3115,6 +3204,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3149,6 +3239,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3182,6 +3273,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3215,6 +3307,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3249,6 +3342,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3283,6 +3377,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3317,6 +3412,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3351,6 +3447,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3384,6 +3481,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3417,6 +3515,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3450,6 +3549,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3483,6 +3583,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3516,6 +3617,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3549,6 +3651,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3582,6 +3685,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3615,6 +3719,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3648,6 +3753,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3681,6 +3787,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3714,6 +3821,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3747,6 +3855,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3780,6 +3889,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3813,6 +3923,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3846,6 +3957,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3879,6 +3991,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3912,6 +4025,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3945,6 +4059,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -3978,6 +4093,7 @@
 					<Add option="-DNO_PROCPS"/>
 					<Add option="-DCURVE_BN128"/>
 					<Add option="-DBN_SUPPORT_SNARK=1"/>
+					<Add option="-DMULTICORE=1"/>
 					<Add option="-DBINARY_OUTPUT"/>
 					<Add option="-DMONTGOMERY_OUTPUT"/>
 					<Add option="-DUSE_ASM"/>
@@ -4727,15 +4843,6 @@
 		<Unit filename="/home/xinyue/libsnark/depends/gtest/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\depends\gtest\"/>
 		</Unit>
-		<Unit filename="/home/xinyue/libsnark/depends/gtest/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\depends\gtest\"/>
-		</Unit>
-		<Unit filename="/home/xinyue/libsnark/depends/gtest/googlemock/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\depends\gtest\googlemock\"/>
-		</Unit>
-		<Unit filename="/home/xinyue/libsnark/depends/gtest/googlemock/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\depends\gtest\googlemock\"/>
-		</Unit>
 		<Unit filename="/home/xinyue/libsnark/depends/gtest/googlemock/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\depends\gtest\googlemock\"/>
 		</Unit>
@@ -4745,32 +4852,8 @@
 		<Unit filename="/home/xinyue/libsnark/depends/gtest/googlemock/cmake/gmock_main.pc.in">
 			<Option virtualFolder="CMake Files\depends\gtest\googlemock\cmake\"/>
 		</Unit>
-		<Unit filename="/home/xinyue/libsnark/depends/gtest/googlemock/cmake/gmock.pc.in">
-			<Option virtualFolder="CMake Files\depends\gtest\googlemock\cmake\"/>
-		</Unit>
-		<Unit filename="/home/xinyue/libsnark/depends/gtest/googlemock/cmake/gmock_main.pc.in">
-			<Option virtualFolder="CMake Files\depends\gtest\googlemock\cmake\"/>
-		</Unit>
-		<Unit filename="/home/xinyue/libsnark/depends/gtest/googlemock/cmake/gmock.pc.in">
-			<Option virtualFolder="CMake Files\depends\gtest\googlemock\cmake\"/>
-		</Unit>
-		<Unit filename="/home/xinyue/libsnark/depends/gtest/googlemock/cmake/gmock_main.pc.in">
-			<Option virtualFolder="CMake Files\depends\gtest\googlemock\cmake\"/>
-		</Unit>
 		<Unit filename="/home/xinyue/libsnark/depends/gtest/googletest/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\depends\gtest\googletest\"/>
-		</Unit>
-		<Unit filename="/home/xinyue/libsnark/depends/gtest/googletest/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\depends\gtest\googletest\"/>
-		</Unit>
-		<Unit filename="/home/xinyue/libsnark/depends/gtest/googletest/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\depends\gtest\googletest\"/>
-		</Unit>
-		<Unit filename="/home/xinyue/libsnark/depends/gtest/googletest/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\depends\gtest\googletest\"/>
-		</Unit>
-		<Unit filename="/home/xinyue/libsnark/depends/gtest/googletest/cmake/internal_utils.cmake">
-			<Option virtualFolder="CMake Files\depends\gtest\googletest\cmake\"/>
 		</Unit>
 		<Unit filename="/home/xinyue/libsnark/depends/gtest/googletest/cmake/gtest.pc.in">
 			<Option virtualFolder="CMake Files\depends\gtest\googletest\cmake\"/>
@@ -4780,33 +4863,6 @@
 		</Unit>
 		<Unit filename="/home/xinyue/libsnark/depends/gtest/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\depends\gtest\googletest\cmake\"/>
-		</Unit>
-		<Unit filename="/home/xinyue/libsnark/depends/gtest/googletest/cmake/gtest.pc.in">
-			<Option virtualFolder="CMake Files\depends\gtest\googletest\cmake\"/>
-		</Unit>
-		<Unit filename="/home/xinyue/libsnark/depends/gtest/googletest/cmake/gtest_main.pc.in">
-			<Option virtualFolder="CMake Files\depends\gtest\googletest\cmake\"/>
-		</Unit>
-		<Unit filename="/home/xinyue/libsnark/depends/gtest/googletest/cmake/internal_utils.cmake">
-			<Option virtualFolder="CMake Files\depends\gtest\googletest\cmake\"/>
-		</Unit>
-		<Unit filename="/home/xinyue/libsnark/depends/gtest/googletest/cmake/gtest.pc.in">
-			<Option virtualFolder="CMake Files\depends\gtest\googletest\cmake\"/>
-		</Unit>
-		<Unit filename="/home/xinyue/libsnark/depends/gtest/googletest/cmake/gtest_main.pc.in">
-			<Option virtualFolder="CMake Files\depends\gtest\googletest\cmake\"/>
-		</Unit>
-		<Unit filename="/home/xinyue/libsnark/depends/gtest/googletest/cmake/internal_utils.cmake">
-			<Option virtualFolder="CMake Files\depends\gtest\googletest\cmake\"/>
-		</Unit>
-		<Unit filename="/home/xinyue/libsnark/depends/gtest/googletest/cmake/gtest.pc.in">
-			<Option virtualFolder="CMake Files\depends\gtest\googletest\cmake\"/>
-		</Unit>
-		<Unit filename="/home/xinyue/libsnark/depends/gtest/googletest/cmake/gtest_main.pc.in">
-			<Option virtualFolder="CMake Files\depends\gtest\googletest\cmake\"/>
-		</Unit>
-		<Unit filename="/home/xinyue/libsnark/depends/libff/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\depends\libff\"/>
 		</Unit>
 		<Unit filename="/home/xinyue/libsnark/depends/libff/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\depends\libff\"/>
@@ -4814,17 +4870,8 @@
 		<Unit filename="/home/xinyue/libsnark/depends/libff/libff/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\depends\libff\libff\"/>
 		</Unit>
-		<Unit filename="/home/xinyue/libsnark/depends/libff/libff/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\depends\libff\libff\"/>
-		</Unit>
 		<Unit filename="/home/xinyue/libsnark/depends/libfqfft/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\depends\libfqfft\"/>
-		</Unit>
-		<Unit filename="/home/xinyue/libsnark/depends/libfqfft/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\depends\libfqfft\"/>
-		</Unit>
-		<Unit filename="/home/xinyue/libsnark/depends/libfqfft/tutorials/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\depends\libfqfft\tutorials\"/>
 		</Unit>
 		<Unit filename="/home/xinyue/libsnark/depends/libfqfft/tutorials/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\depends\libfqfft\tutorials\"/>

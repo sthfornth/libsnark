@@ -65,7 +65,7 @@ void test_r1cs_ppzksnark_limit_len(int la, int ra, int lb, int rb, int lenc, int
 }
 
 template<typename ppT>
-void test_r1cs_ppzksnark_xxx(int la, int ra, int lb, int rb, int lenc, int alimit)
+void test_r1cs_ppzksnark_xxx(int la, int ra, int lb, int rb, int lenc, int alimit = -1, int blimit = -1, int num = 2)
 {
     libff::print_header("(enter) Test R1CS ppzkSNARK");
 
@@ -75,13 +75,25 @@ void test_r1cs_ppzksnark_xxx(int la, int ra, int lb, int rb, int lenc, int alimi
     string b = get_random_str(lb) + c2 + get_random_str(rb);
     vector<string> s;
     s.push_back(a);
-    s.push_back(b);
+    for (int i = 1; i < num; i ++)
+    {
+        s.push_back(b);
+    }
+
     vector<pair<int, int> > limit;
     limit.push_back(make_pair(-1, alimit));
-    limit.push_back(make_pair(-1, -1));
+    for (int i = 1; i < num; i ++)
+    {
+        limit.push_back(make_pair(-1, blimit));
+    }
+
     vector<pair<int, int> > range;
     range.push_back(make_pair(la, la + lenc));
-    range.push_back(make_pair(lb, lb + lenc));
+    for (int i = 1; i < num; i ++)
+    {
+        range.push_back(make_pair(lb, lb + lenc));
+    }
+
     r1cs_example<libff::Fr<ppT> > example = generate_r1cs_example<libff::Fr<ppT> >(s, limit, range);
     //generate_r1cs_example_with_binary_input<libff::Fr<ppT> >(num_constraints, input_size);
     const bool bit = run_r1cs_ppzksnark<ppT>(example, test_serialization);
@@ -97,19 +109,24 @@ int main()
     vector<double> times;
     char buffer[100000];
     char *ptr = buffer;
-    int m = 5 - 1;
-    for (int len = 5; len <= 5; len ++) {
+    int m = 10 - 1;
+//    int num = 3; //#string
+    int len = 10;
+    for (int num = 4; num <= 16; num += 3){
+//    for (int len = 4; len <= 40; len += 4) {
         times.clear();
         int lenc = len;
         int la = rand() % (len * m + 1), ra = len * m - la;
 //        int lb = rand() % (len * m + 1), rb = len * m - la;
         int lb = 0, rb = 0;
         int limit = la + ra + lenc + 1;
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 3; i++) {
             // len_a = la + ra + len_c, len_b = lb + rb + len_c
-//            test_r1cs_ppzksnark<default_r1cs_ppzksnark_pp>(la, ra, lb, rb, lenc);
-//            test_r1cs_ppzksnark_limit_len<default_r1cs_ppzksnark_pp>(la, ra, lb, rb, lenc, limit);
-            test_r1cs_ppzksnark_xxx<default_r1cs_ppzksnark_pp>(la, ra, lb, rb, lenc, limit);
+//            test_r1cs_ppzksnark<default_r1cs_ppzksnark_pp>(la, ra, lb, rb, lenc); //test 1,2
+//            test_r1cs_ppzksnark_limit_len<default_r1cs_ppzksnark_pp>(la, ra, lb, rb, lenc, limit); //test 4
+//            test_r1cs_ppzksnark_xxx<default_r1cs_ppzksnark_pp>(la, ra, lb, rb, lenc, limit); //test 4
+//            test_r1cs_ppzksnark_xxx<default_r1cs_ppzksnark_pp>(la, ra, lb, rb, lenc, -1, -1, num); //test 3
+            test_r1cs_ppzksnark_xxx<default_r1cs_ppzksnark_pp>(la, ra, lb, rb, lenc, limit, limit, num); //test 5
             double x = libff::last_times["Call to run_r1cs_ppzksnark"] * 1e-9;
             //        printf("[%0.4fs]", x);
             times.push_back(x);
